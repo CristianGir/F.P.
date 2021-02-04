@@ -1,0 +1,102 @@
+s='+'
+r='-'
+m='*'
+d='/'
+o=None
+v=None
+x=None
+g='Escribe el número '
+z='z'
+y='q'
+ex='!'
+wh=None
+wh_d=None
+
+n=input('Hola, ¿cuál es tu nombre? ')
+print('\nHola ',n+ex,'\n')
+print(n,',vamos a realizar una operación, por favor sigue las instrucciones, las opciones se mostrarán entre comillas "", escríbelas tal cual como se vean. \n')
+
+f=input('¿Con qué tipo de números vamos a trabajar hoy, enteros "z", racionales "q"?: \n')
+f=f.lower()
+while(f!=z)and(f!=y):
+    wh=3
+    wh==3
+    f=input('Por favor elige una opción válida. enteros "z", racionales "q": ')
+    f=f.lower()
+if f==z:
+    c=input('Escribe que operación deseas realizar: suma "+", resta "-", multiplicación "*" o división "/": \n')
+    while(c!=s)and(c!=r)and(c!=m)and(c!=d):
+        c=input('Por favor elige una opción válida. suma "+", resta "-", multiplicación "*" o división "/": \n')
+    if c==s:
+        x='al que se le sumará:'
+        v='que se sumará: '
+        print('Se realizará una suma.')
+    elif c==r:
+        x='al que se le restará: '
+        v='que se restará: '
+        print('Se realizará una resta.')
+    elif c==m:
+        x='que será multiplicado: '
+        v='por el que se multiplicará.'
+        print('Se realizará una multiplicación.')
+    elif c==d:
+        x='que será dividido: '
+        v='por el que se dividirá.'
+        print('Se realizará una división.')
+
+        
+    
+    p=int(input(g+x))
+    b=int(input(g+v))
+    if c==s:
+        o=p+b    
+    elif c==r:
+        o=p-b
+    elif c==m:
+        o=p*b
+    elif c==d:
+        while b==0:
+            b=int(input('No es posible dividir entre cero, por favor elige otro número: '))
+        o=p//b
+    print('\nEl resultado de la operación es: ',o)
+    
+#División.
+    
+elif f==y:
+    c=input('Escribe que operación deseas realizar: suma"+", resta"-", multiplicación"*" o división"/": \n')
+    while (c!=s)and(c!=r)and(c!=m)and(c!=d):
+        c=input('Por favor elige una opción válida. suma "+", resta "-", multiplicación "*" o división "/": \n')
+    if c==s:
+        x='al que se le sumará:'
+        v='que se sumará: '
+        print('Se realizará una suma.')
+    elif c==r:
+        x='al que se le restará: '
+        v='que se restará: '
+        print('Se realizará una resta.')
+    elif c==m:
+        x='que será multiplicado: '
+        v='por el que se multiplicará.'
+        print('Se realizará una multiplicación.')
+    elif c==d:
+        x='que será dividido: '
+        v='por el que se dividirá.'
+        print('Se realizará una división.')
+    else:
+        print('Por favor selecciona una opción correcta')
+    p=float(input(g+x))
+    b=float(input(g+v))
+    if c==s:
+        o=p+b
+    elif c==r:
+        o=p-b
+    elif c==m:
+        o=p*b
+    elif c==d:
+        while b==0:
+            b=float(input('No es posible dividir entre cero, por favor elige otro número: '))
+        o=p/b
+    print('\nEl resultado de la operación es: ',o)
+else:
+    print('Selecciona una opción válida')
+    
