@@ -1,0 +1,7 @@
+print('Se va a calcular la cantidad de empleados necesarios para optimizar un proceso.')
+e=int(input('Ingrese el número de empleados que trabajan: '))
+t=float(input('Ingrese el tiempo en horas que tardan los empleados: '))
+td=float(input('Ingrese el tiempo en horas que desea que tarde: '))
+ed=(e/td)*t
+ed=int(ed)
+print('Usted necesitaría de aproximadamente',ed,'empleados para realizar el trabajo en',td,'horas')
