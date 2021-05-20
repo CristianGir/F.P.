@@ -1,0 +1,9 @@
+print('Se va a calcular el precio total de un procuto teniendo en cuenta el IVA y un descuento.')
+m=int(input('Ingrese el monto neto del producto'))
+d=((m/100)*5)
+md=m-d
+i=((md/100)*19)
+pt=md+i
+print('Usted tiene un descuento de ',round(d),' en el prodcuto que compró.')
+print('El IVA de su compra es de ',round(i))
+print('El valor total de su compra es ',round(pt))
