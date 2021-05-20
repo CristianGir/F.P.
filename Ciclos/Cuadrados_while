@@ -1,0 +1,9 @@
+cont=0
+num=0
+d=int(input('Ingrese el número máximo del rango: '))
+while cont>=0 and cont<d:
+    cont=cont+1
+    re=cont**2
+    num=num+re
+    re=0
+    print(num)
