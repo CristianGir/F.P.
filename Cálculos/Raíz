@@ -1,0 +1,9 @@
+print('Se van a calcular las raíces de una ecuación cuadrática.')
+print('la ecuación cuadrática es de la forma A^2-2B-C=0')
+a=int(input('Ingrese la variable A correspondiente a A^2: '))
+b=int(input('Ingrese la variable B correspondiente a -2B: '))
+c=int(input('Ingrese la variable C correspondiente a -C: '))
+r=(-b+((b**2)-4*a*c)**(1/2))/2*a
+rd=(-b-((b**2)-4*a*c)**(1/2))/2*a
+print('X1 es igual a',r)
+print('X2 es igual a',rd)
