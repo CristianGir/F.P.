@@ -1,0 +1,24 @@
+y='y'
+ne=1
+apr=0
+rep=0
+no=0
+while y=='y':
+    n=float(input('Ingrese la nota final del estudiante:'))
+    while n>10 or n<0:
+        n=float(input('Ingrese una nota válida para el estudiante:'))
+    ne=ne+1
+    if n>=5:
+        apr=apr+1
+    else:
+        rep=rep+1
+    if n>=7 and n<9:
+        no=no+1
+    y=input('Si desea añadir otra nota, ingrese "Y", de lo contrario, ingrese "N": ')
+    y=y.lower()
+    while y!='y' and y!='n':
+        y=input('Si desea añadir otra nota, ingrese "Y", de lo contrario, ingrese "N": ')
+    y=y.lower()
+print('La cantidad de aprobados es:',apr)
+print('La cantidad de reprobados es:',rep)
+print('La cantidad de alumnos con calificación "Notable" es:',no)
