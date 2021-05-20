@@ -1,0 +1,13 @@
+l=list(range(0,101))
+num=0
+for i in l:
+    num=i+num
+print('Usando "for".')
+print('El resultado de la suma de 0 a 100 es:',num)
+num=0
+i=0
+while i in l:
+    num=i+num
+    i=i+1
+print('Usando "while".')
+print('El resultado de la suma de 0 a 100 es:',num)
