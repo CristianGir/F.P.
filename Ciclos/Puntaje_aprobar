@@ -1,0 +1,8 @@
+print('Se va a calcular cuánto debe sacar en el examen supletorio a partir de sus notas anteriores.')
+p=int(input('Ingrese con números enteros (50 para 5, 45 para 4.5 etc.) la calificación del primer bimestre: '))
+pb=p/10
+s=int(input('Ingrese con números enteros (50 para 5, 45 para 4.5 etc.) la calificación del seundo bimestre: '))
+sb=s/10
+a=(sb+pb)
+ex=10.5-a
+print('Para aprobar con 3.5 usted necesita obtener un',round(ex,1),'en el examen supletorio.')
