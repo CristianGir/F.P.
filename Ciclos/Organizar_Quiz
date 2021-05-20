@@ -1,0 +1,102 @@
+#Leer 3 números enteros, y leer uno adicional "1" para > y "2" para <.
+print('Se van a comparar tres números y se van a organizar según la elección.')
+v=int(input('Ingrese "1" para organizarlo de mayor a menor, \
+o "2" para organizarlos de menor a mayor: '))
+while v!=1 and v!=2:
+    v=int(input('Por favor seleccione una opción válida, "1" >, "2"<: '))
+A=int(input('Ingrese el número A: '))
+B=int(input('Ingrese el número B: '))
+C=int(input('Ingrese el número C: '))
+if v==1:
+    if A==B and A>C:
+        print('A y B son iguales a: ',A)
+        print('C=',C)
+    elif A==C and A>B:
+        print('A y C son iguales a: ',A)
+        print('B=',B)
+    elif C==B and C>A:
+        print('C y B son iguales a: ',C)
+        print(A)
+    elif A==B and A<C:
+        print('C=',C)
+        print('A y B son iguales a: ',A)
+    elif A==C and A<B:
+        print('B=',B)
+        print('A y C son iguales a: ',A)
+    elif C==B and C<A:
+        print('A=',A)
+        print('C y B son iguales a: ',C)
+    elif A>B and A>C:
+        print('A=',A)
+        if B>C:
+            print('B=',B)
+            print('C=',C)
+        else:
+            print('C=',C)
+            print('B=',B)
+    elif B>A and B>C:
+        print('B=',B)
+        if A>C:
+            print('A=',A)
+            print('C=',C)
+        else:
+            print('C=',C)
+            print('A=',A)
+    elif C>A and C>B:
+        print('C=',C)
+        if A>B:
+            print('A=',A)
+            print('B=',B)
+        else:
+            print('B=',B)
+            print('B=',A)
+    elif A==B and A==C:
+        print('Los tres números son iguales.')
+            
+#División entre mayor y menor.
+            
+elif v==2:
+    if A==B and A<C:
+        print('A y B son iguales a: ',A)
+        print('C=',C)
+    elif A==C and A<B:
+        print('A y C son iguales a: ',A)
+        print('B=',B)
+    elif C==B and C<A:
+        print('C y B son iguales a: ',C)
+        print('A=',A)
+    elif A==B and A>C:
+        print('C=',C)
+        print('A y B son iguales a: ',A)
+    elif A==C and A>B:
+        print('B=',B)
+        print('A y C son iguales a: ',A)
+    elif C==B and C>A:
+        print('A=',A)
+        print('C y B son iguales a: ',C)
+    elif A<B and A<C:
+        print('A=',A)
+        if B<C:
+            print('B=',B)
+            print('C=',C)
+        else:
+            print('C=',C)
+            print('B=',B)
+    elif B<A and B<C:
+        print('B=',B)
+        if A<C:
+            print('A=',A)
+            print('C=',C)
+        else:
+            print('C=',C)
+            print('A=',A)
+    elif C<A and C<B:
+        print('C=',C)
+        if A<B:
+            print('A=',A)
+            print('B=',B)
+        else:
+            print('B=',B)
+            print(A)
+    elif A==B and A==C:
+        print('Los tres números son iguales.')
