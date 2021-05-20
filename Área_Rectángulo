@@ -1,6 +1,0 @@
-print('Se va a hallar el área y perímetro de de un rectángulo con las medidas de la base y su altura.')
-b=float(input('Ingrese la medida en cm de la base del rectángulo: '))
-h=float(input('Ingrese la medida en cm de la altura del rectángulo: '))
-a=b*h
-p=(b*2)+(h*2)
-print('El área es igual a',round(a,2),', y el perímetro es igual a',round(p,2))
