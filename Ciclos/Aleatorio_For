@@ -1,0 +1,55 @@
+import random
+cont=0
+neg=0
+canneg=1
+pos=0
+canpos=1
+tod=0
+reg=0
+may=0
+men=0
+mayn=-100
+menp=1
+l=list(range(0,101))
+for i in l:
+    d=random.randint(-100,100)
+    print(d)
+    tod=tod+d
+    print(d)
+    if d<0:
+        canneg=canneg+1
+        neg=neg+d
+    elif d>0:
+        canpos=canpos+1
+        pos=pos+d
+    reg=d
+#Mayor todos.
+    if reg>=may:
+        may=d
+#Mayor negativos.
+    if reg>=mayn and reg<0:
+            mayn=d
+#Menor todos.
+    if reg<=men:
+        men=d
+        reg=0
+#Menor positivos.
+    if reg<=menp and reg>0:
+            menp=men
+    reg=0
+    prot=tod/100
+    pron=neg/canneg
+    prop=pos/canpos
+    
+print('La suma total de los números es:',tod)
+print('El promedio de todos los dígitos es:',round(prot,2))
+print('La suma de los negativos es:',neg)
+print('El promedio de los negativos es:',round(pron,2))
+print('La suma de los positivos es:',pos)
+print('El promedio de los positivos es:',round(prop,2))
+print('El menor de todos es:',men)
+print('El mayor de todos es:',may)
+print('El menor de los negativos es:',men)
+print('El mayor de los negativos es:',mayn)
+print('El menor de los positivos es:',menp)
+print('El mayor de los positivos es:',may)
