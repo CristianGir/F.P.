@@ -1,0 +1,8 @@
+
+rec=0
+d=int(input('Ingrese el número máximo del rango: '))
+l=list(range(1,d+1))
+for i in l:
+    cu=i**2
+    rec=rec+cu
+    print(rec)
