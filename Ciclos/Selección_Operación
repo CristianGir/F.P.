@@ -1,0 +1,23 @@
+
+l={1,2,3,4}
+op=None
+m='Ingrese el número A: '
+m1='Ingrese el número B: '
+print('Escriba el número que represente la operación que desea realizar')
+seleccionOp=int(input('1. Adición.\n2. Sustracción.\n3. Multiplicación.\n4. División.\n:'))
+while not seleccionOp in l:
+    seleccionOp=int(input('Por favor sellecione una opción válida.\n1. Adición.\n2. Sustracción.\n\
+3. Multiplicación.\n4. División.\n:'))
+n1=float(input(m))
+n2=float(input(m1))
+if seleccionOp==4 and n2==0:
+         n2=float(input('No es posible dividir entre cero, por favor ingrese otro número: '))
+if seleccionOp==1:
+    op=n1+n2
+elif seleccionOp==2:
+         op=n1-n2
+elif seleccionOp==3:
+         op=n1*n2
+elif seleccionOp==4:
+         op=n1/n2
+print('El resultado de la operación es: ',round(op,3))
