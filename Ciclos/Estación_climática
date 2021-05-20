@@ -1,0 +1,29 @@
+error=0
+count=0
+mi=0
+ma=0
+conf='y'
+while conf=='y':
+    temin=float(input('Ingrese la temperatura mínima proporcionada: '))
+    temax=float(input('Ingrese la temperatura máxima proporcionada: '))
+    while temin>temax:
+        temin=float(input('Ingrese la temperatura mínima proporcionada: '))
+        temax=float(input('Ingrese la temperatura máxima proporcionada: '))
+    count=count+1
+    mi=mi+temin
+    ma=ma+temax
+    if temin==9 or temax==9:
+        error=error+1
+    conf=input('Si desea introducir otra pareja de datos ingrese "Y", de lo contrario, ingrese "N": ')
+    conf=conf.lower()
+    while conf!='y' and conf!='n':
+        conf=input('Si desea introducir otra pareja de datos ingrese "Y", de lo contrario, ingrese "N": ')
+        conf=conf.lower()
+medmin=mi/count
+medmax=ma/count
+porc=(error*100)/count
+print('Se proporcionó información por',count,'días.')
+print('El promedio de las temperaturas mínimas es:',medmin)
+print('El promedio de las temperaturas máximas es:',medmax)
+print('Se registraron errores',error,'veces.')
+print('El porcentaje de errores es:',porc)
