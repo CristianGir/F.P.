@@ -1,0 +1,20 @@
+m=input('Ingrese el nombre de un mes: ')
+m=m.lower()
+mes31={'enero','marzo','mayo','julio','agosto','octubre','diciembre'}
+mes30={'abril','junio','septiembre','noviembre'}
+while m!='enero' and m!='febrero' and m!='marzo' and m!='abril' and m!='mayo' and m!='junio' and m!='julio' and m!='agosto' and m!='septiembre' and m!='octubre' and m!='noviembre' and m!='diciembre':
+    m=input('Ingrese el nombre de un mes: ')
+    m=m.lower()
+b=input('Si el año es bisiesto presione "Y", de lo contrario presione "N": ')
+b=b.lower()
+while b!='y' and b!='n':
+    b=input('Si el año es bisiesto presione "Y", de lo contrario presione "N": ')
+    b=b.lower()
+if m=='febrero' and b=='y':
+    print('En año bisiesto febrero tiene 29 días.')
+elif m=='febrero' and b=='n':
+    print('Febrero tiene 28 días.')
+if m in mes31:
+    print(m,'tiene 31 días.')
+elif m in mes30:
+    print(m,'tiene 30 días.')
