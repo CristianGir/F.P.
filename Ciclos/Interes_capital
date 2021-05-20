@@ -1,0 +1,8 @@
+count=1
+c=float(input('Ingrese el capital: '))
+r=float(input('Ingrese el porcentaje anual del interés: '))
+t=(r/100)*c
+while t<c*2:
+    t=t+t
+    count=count+1
+print(count)
