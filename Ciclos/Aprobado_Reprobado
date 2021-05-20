@@ -1,0 +1,31 @@
+#Petición de nombre.
+n=input('¿Cuál es su nombre?: ')
+#Saludo y explicación.
+print('¡Hola ',n, '!')
+print('\nVamos a comprobar si puede aprobar la materia teniendo en cuenta las notas de sus parciales y sus inasistencias ')
+#Variable de primer parcial.
+pp=float(input('Ingrese la nota de su primer parcial: '))
+while (pp<0)or(pp>5):
+    pp=float(input('Ingrese un número válido: '))
+#Variable de segundo parcial.
+sp=float(input('Ingrese la nota de su segundo parcial: '))
+while (sp<0)or(sp>5):
+    sp=float(input('Ingrese un número válido: '))
+#Variable de tercer parcial.
+tp=float(input('Ingrese la nota de su tercer parcial: '))
+while (tp<0)or(tp>5):
+    tp=float(input('Ingrese un número válido: '))
+#Variable de inasistencias.
+inas=int(input('Ingrese la cantidad de inasistencias que presente: '))
+while inas<0:
+    inas=int(input('Ingrese un valor válido: '))
+#Entrega de resultado.
+porcentaje=((pp/100)*35)+((sp/100)*35)+((tp/100)*30)
+if (porcentaje>=3.0)and(inas<=12):
+    print('Usted aprobó académicamente con un ',round(porcentaje,2),' y presentó ',inas,' inasistencias.')
+elif (porcentaje<3.0)and(inas<=12):
+    print('Usted reprobó académicamente con un ',round(porcentaje,2),' y presentó ',inas,' inasistencias.')
+elif (porcentaje>=3.0)and(inas>12):
+    print('Usted aprobó académicamente con un ',round(porcentaje,2),' pero repobró al tener ',inas,' inasistencias.')
+elif (porcentaje<3.0)and(inas>12):
+    print('Usted reporbó académicamente con un ',round(porcentaje,2),' y reprobó al tener ',inas,' inasistencias.')
