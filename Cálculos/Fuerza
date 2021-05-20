@@ -1,0 +1,11 @@
+g=9.8
+print('Se calculará la fuerza necesaria para mover un objeto en una superficie horizontal tomando en cuenta \
+su masa y el coeficiente de rozamiento.')
+m=float(input('Ingrese la masa en kilogramos del objeto: '))
+r=float(input('Ingrese el coeficiente de rozamiento: '))
+fn=m*g
+fs=r*m*g
+nkg=fn*0.102
+skg=fs*0.102
+print('Este objeto ejerce una fuerza normal igual a',round(fn,2),'Nw o',round(nkg,2),'kg-fuerza.')
+print('Para mover este objeto será necesario aplicar una fuerza igual a',round(fs,2),'Nw o',round(skg,2),'kg-fuerza.')
