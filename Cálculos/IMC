@@ -1,0 +1,5 @@
+print('Se va a calcular el índice de masa corporal.')
+e=int(input('Ingrese su estatura en centímetros: '))
+p=float(input('Ingrese su peso en kilogramos: '))
+im=p/(e/100)**2
+print('Su índice de masa corporal "IMC" es de: ',round(im,1))
