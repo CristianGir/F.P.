@@ -1,0 +1,5 @@
+print('Se va a hallar la velocidad requerida para que un vehículo recorra una distancia en determiando tiempo.')
+d=float(input('Ingrese la distancia en km que va a recorrer el vehículo: '))
+t=float(input('Ingrese el tiempo en horas que tardará el vehículo: '))
+v=d/t
+print('El vehículo tendrá que ir a una velocidad aproximada de',round(v,3),'km/h')
