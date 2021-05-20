@@ -1,0 +1,113 @@
+import random
+vector=[]
+#Ordenamiento de burbuja.
+def burbuja (x):
+  organizado=False
+  while organizado==False:
+    organizado=True
+    for i in range(len(x)-1):
+      if x[i]>x[i+1]:
+        temp=x[i]
+        x[i]=x[i+1]
+        x[i+1]=temp
+        organizado=False
+#Ordenamiento por inserción.
+def insercion(x):
+    for i in range(1,len(x)):
+        valor=x[i]
+        j=i
+        while (j>0 and x[j-1]>valor):
+            x[j]=x[j-1]
+            j=j-1
+            x[j]=valor
+#Ordenamiento shell.
+##Función de ordenamiento por inserción.
+def inser(x,valor,j):
+    for i in range(1,len(x)):
+        valor=x[i]
+        j=i
+        while (j>0 and x[j-1]>valor):
+            x[j]=x[j-1]
+            j=j-1
+            x[j]=valor
+##Función de ordenamiento shell.
+def shell(x):
+  sub=len(x)//2
+  while sub>0:
+    for i in range(sub):
+      inser(x,i,sub)
+    sub=sub//2
+#Ordenamiento QuickSort.
+def quick(x):
+  lenght=len(x)
+  if lenght<=1:
+    return x
+  else:
+    pivot=x.pop()
+  left=[]
+  right=[]
+  for i in x:
+    if i>pivot:
+      right.append(i)
+    else:
+      left.append(i)
+  return quick(left)+[pivot]+quick(right)
+#ordenamiento por selección.
+def seleccion(x):
+   for i in range(len(x)-1,0,-1):
+       mayor=0
+       for j in range(1,i+1):
+           if x[j]>x[mayor]:
+              mayor=j
+       temp=x[i]
+       x[i]=x[mayor]
+       x[mayor]=temp
+#Lista.
+def lista():
+  can=int(input('Ingrese la cantidad de datos que tendrá la lista: '))
+  print('\n\t1. Creación de lista aleatoria.')
+  print('\t2. Creación de lista manual.')
+  lis=int(input('Ingrese el número correspondiente a la actividad deseada: '))
+  while lis<1 or lis>2:
+    lis=int(input('Ingrese un número válido: '))
+  if lis==1:
+    mi=int(input('\nIngrese el valor mínimo de los datos: '))
+    ma=int(input('Ingrese el valor máximo de los datos: '))
+    for i in range(can):
+      vector.append(random.randint(mi,ma))
+    print('\nLa lista es: ')
+    print(vector)
+  else:
+    for i in range(can):
+      valli=int(input('\nIngrese el valor a añadir en la lista: '))
+      vector.append(valli)
+    print('\nLa lista es: ')
+#Menú.
+def menu():
+  print('\n¿Cómo desea ordenar la lista?')
+  print('\t1. Ordenamiento de burbuja.')
+  print('\t2. Ordenamiento por inserción.')
+  print('\t3. Ordenamiento shell.')
+  print('\t4. Ordenamiento QuickSort.')
+  print('\t5. Ordenamiento por selección.')
+  op=int(input('Ingrese el número correspondiente a la actividad deseada: '))
+  while op<1 or op>5:
+    op=int(input('Ingrese un número válido: '))
+  if op==1:
+    burbuja(vector)
+  elif op==2:
+    insercion(vector)
+  elif op==3:
+    shell(vector)
+  elif op==4:
+    print('\nLa lista ordenada es la siguiente:')
+    print(quick(vector))
+  elif op==5:
+    seleccion(vector) 
+  if op!=4:
+    print('\nLa lista ordenada es la siguiente:')
+    print(vector)
+
+#Llamado.
+lista()
+menu()
