@@ -1,0 +1,18 @@
+pos=0
+neg=0
+count=1
+canpos=0
+canneg=0
+while count>=1 and count<=100:
+    n=float(input('Ingrese el número deseado: '))
+    count=count+1
+    if n>0:
+        canpos=canpos+1
+        pos=pos+n
+    elif n<0:
+        canneg=canneg+1
+        neg=neg+n
+medpos=pos/canpos     
+medneg=neg/canneg
+print('La media de los números positivos es:',round(medpos,2))
+print('La media de los números negativos es:',round(medneg,2))
