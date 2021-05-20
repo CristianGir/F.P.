@@ -1,0 +1,20 @@
+print('Se va a hallar el sueldo mensual teniendo en cuenta factores como la seguridad social y bonificaciones.')
+b=None
+h=int(input('Ingrese el número de horas trabajadas por día: '))
+v=int(input('Ingrese el valor pagado en dólares por hora de trabajo: '))
+ih=h*6*4
+s=ih*v
+if s<300:
+    b=2
+else:
+    b=0
+ss=((s/100)*8)
+bon=((s/100)*b)
+st=(s-ss)+bon
+if s<300:
+    print('Su pago por seguridad social es equivalente a $',ss,'dólares.')
+    print('Por tener un salario base menor a $ 300 dólares, se le da $',bon,'como bonificación.')
+    print('Sumando lo anterior, su sueldo mensual es de: $',st,'dólares.')
+elif s>=300:
+    print('Su pago por seguridad social es equivalente a $',ss,'dólares.')
+    print('Sumando lo anterior, su sueldo mensual es de: $',st,'dólares.')
