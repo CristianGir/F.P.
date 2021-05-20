@@ -1,0 +1,12 @@
+n=float(input('Ingrese un número entero positivo: '))
+n=int(n)
+while n<0:
+    n=float(input('Ingrese un número entero POSITIVO: '))
+    n=int(n)
+a=n%2
+b=n%3
+c=n%5
+if a!=0 and b!=0 and c!=0:
+    print('El número es  primo.')
+else:
+    print('El número es compuesto.')
