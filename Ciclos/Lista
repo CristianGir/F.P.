@@ -1,0 +1,9 @@
+count=0
+pro=0
+n=float(input('Ingrese los números de la lista para hallar su promedio, para finalizar, ingrese uno negativo: '))
+while n>0:
+    n=float(input(':'))
+    pro=pro+n
+    count=count+1
+media=pro/count
+print('La media de la lista es:',round(media,2))
