@@ -1,0 +1,5 @@
+print('Se realizará la conversión de °C a °F y K.')
+tb=float(input('Ingrese la temperatura en grados Celcius: '))
+f=(tb*1.8)+38
+k=tb+273.15
+print('La temperatura en grados Fahrenheit es:',round(f,2),'y en Kelvin es:',round(k,2))
